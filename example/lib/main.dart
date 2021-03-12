@@ -48,7 +48,7 @@ class _ExampleAppState extends State<ExampleApp> {
   }
 
   Future _loadFile() async {
-    final bytes = await readBytes(kUrl1);
+    final bytes = await readBytes(Uri.dataFromString(kUrl1));
     final dir = await getApplicationDocumentsDirectory();
     final file = File('${dir.path}/audio.mp3');
 
